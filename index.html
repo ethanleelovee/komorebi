@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Komorebi — Melbourne</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <a href="#" class="nav__logo">Komorebi</a>
+    <ul class="nav__links">
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#visit">Visit</a></li>
+    </ul>
+  </nav>
+
+  <!-- ─────────────────────────────────────────────────────
+       ACT 1 (pinned) — 3-phase zoom journey
+       Phase 1: city landscape  "The world never stops."
+       Phase 2: café medium close-up  "We do."
+       Phase 3: zoom into window → fade to black → Act 3
+  ───────────────────────────────────────────────────────── -->
+  <section class="act1" id="act1">
+
+    <!-- This element is what GSAP scales.
+         transform-origin: center keeps the café anchored. -->
+    <div class="act1__zoom-wrap">
+
+      <video class="act1__bg-video" autoplay muted loop playsinline>
+        <source src="komorebi%20scene1.mp4" type="video/mp4" />
+      </video>
+
+    </div>
+
+    <!-- Dark overlay — darkens during zoom -->
+    <div class="act1__overlay"></div>
+
+    <!-- Cut video — fades/zooms in during Phase 2 -->
+    <video class="act1__cut" autoplay muted loop playsinline src="komorebi3.mp4"></video>
+
+    <!-- Phase 1 text -->
+    <p class="act1__text act1__text--phase1">The world never stops</p>
+
+    <!-- Phase 2 text -->
+    <p class="act1__text act1__text--phase2">We do</p>
+
+    <!-- Scroll hint -->
+    <div class="act1__scroll-hint">
+      <span>scroll</span>
+      <div class="act1__scroll-line"></div>
+    </div>
+
+    <!-- ACT 3 — pinned inside Act 1, fades in after zoom/blackout -->
+    <section class="act3" id="act3">
+      <video class="act3__video" muted loop playsinline src="komorebi4.mov"></video>
+      <p class="act3__text">Pause and have a rest</p>
+    </section>
+
+  </section>
+
+  <!-- ─────────────────────────────────────────────────────
+       ACT 4 — Menu
+  ───────────────────────────────────────────────────────── -->
+  <section class="act4" id="menu">
+    <div class="act4__inner">
+
+      <h2 class="act4__title">Our Menu</h2>
+      <p class="act4__subtitle">Simple ingredients. Unhurried craft.</p>
+
+      <div class="act4__categories">
+
+        <!-- COFFEE -->
+        <div class="act4__category">
+          <h3 class="act4__cat-title">Coffee</h3>
+          <ul class="act4__items">
+            <li class="act4__item">
+              <div class="act4__item-left">
+                <span class="act4__item-name">Pour Over <span class="act4__popular">popular</span></span>
+                <span class="act4__item-desc">Single origin, hand-poured to order</span>
+              </div>
+              <span class="act4__item-price">$7</span>
+            </li>
+            <li class="act4__item">
+              <div class="act4__item-left">
+                <span class="act4__item-name">Aeropress</span>
+                <span class="act4__item-desc">Smooth and full-bodied, brewed slowly</span>
+              </div>
+              <span class="act4__item-price">$6</span>
+            </li>
+            <li class="act4__item">
+              <div class="act4__item-left">
+                <span class="act4__item-name">Cold Brew</span>
+                <span class="act4__item-desc">12-hour steeped, served over ice</span>
+              </div>
+              <span class="act4__item-price">$7</span>
+            </li>
+            <li class="act4__item">
+              <div class="act4__item-left">
+                <span class="act4__item-name">Matcha Latte <span class="act4__popular">popular</span></span>
+                <span class="act4__item-desc">Ceremonial grade matcha, steamed oat milk</span>
+              </div>
+              <span class="act4__item-price">$7</span>
+            </li>
+            <li class="act4__item">
+              <div class="act4__item-left">
+                <span class="act4__item-name">Hojicha Latte</span>
+                <span class="act4__item-desc">Roasted green tea, warm and earthy</span>
+              </div>
+              <span class="act4__item-price">$7</span>
+            </li>
+            <li class="act4__item">
+              <div class="act4__item-left">
+                <span class="act4__item-name">Yuzu Tonic</span>
+                <span class="act4__item-desc">Japanese citrus, sparkling water, fresh mint</span>
+              </div>
+              <span class="act4__item-price">$6</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- BRUNCH -->
+        <div class="act4__category">
+          <h3 class="act4__cat-title">Brunch</h3>
+          <ul class="act4__items">
+            <li class="act4__item">
+              <div class="act4__item-left">
+                <span class="act4__item-name">Tamago Toast <span class="act4__popular">popular</span></span>
+                <span class="act4__item-desc">Soft egg, dashi butter, toasted sourdough</span>
+              </div>
+              <span class="act4__item-price">$18</span>
+            </li>
+            <li class="act4__item">
+              <div class="act4__item-left">
+                <span class="act4__item-name">Miso Avocado Toast</span>
+                <span class="act4__item-desc">White miso, ripe avocado, sesame, nori</span>
+              </div>
+              <span class="act4__item-price">$19</span>
+            </li>
+            <li class="act4__item">
+              <div class="act4__item-left">
+                <span class="act4__item-name">Onigiri Set</span>
+                <span class="act4__item-desc">Two rice balls, miso soup, seasonal pickles</span>
+              </div>
+              <span class="act4__item-price">$16</span>
+            </li>
+            <li class="act4__item">
+              <div class="act4__item-left">
+                <span class="act4__item-name">Acai Bowl</span>
+                <span class="act4__item-desc">Acai, banana, granola, seasonal fruit</span>
+              </div>
+              <span class="act4__item-price">$17</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- PASTRY -->
+        <div class="act4__category">
+          <h3 class="act4__cat-title">Pastry</h3>
+          <ul class="act4__items">
+            <li class="act4__item">
+              <div class="act4__item-left">
+                <span class="act4__item-name">Butter Croissant</span>
+                <span class="act4__item-desc">Classic laminated dough, flaky and golden</span>
+              </div>
+              <span class="act4__item-price">$5</span>
+            </li>
+            <li class="act4__item">
+              <div class="act4__item-left">
+                <span class="act4__item-name">Matcha Croissant <span class="act4__popular">popular</span></span>
+                <span class="act4__item-desc">Layered with ceremonial matcha cream</span>
+              </div>
+              <span class="act4__item-price">$6</span>
+            </li>
+            <li class="act4__item">
+              <div class="act4__item-left">
+                <span class="act4__item-name">Matcha An Pan</span>
+                <span class="act4__item-desc">Soft bread, matcha dough, red bean filling</span>
+              </div>
+              <span class="act4__item-price">$5</span>
+            </li>
+            <li class="act4__item">
+              <div class="act4__item-left">
+                <span class="act4__item-name">Hojicha Roll</span>
+                <span class="act4__item-desc">Rolled sponge, hojicha cream, light dusting</span>
+              </div>
+              <span class="act4__item-price">$7</span>
+            </li>
+            <li class="act4__item">
+              <div class="act4__item-left">
+                <span class="act4__item-name">Sesame Financier</span>
+                <span class="act4__item-desc">Black sesame, almond flour, browned butter</span>
+              </div>
+              <span class="act4__item-price">$5</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────────────────────────────
+       ACT 5 — Find Your Moment
+  ───────────────────────────────────────────────────────── -->
+  <section class="act5" id="visit">
+    <div class="act5__inner">
+
+      <h2 class="act5__title">Find Your Moment</h2>
+
+      <div class="act5__grid">
+
+        <div class="act5__info">
+          <div class="act5__info-block">
+            <h4>Address</h4>
+            <p>42 Wabi Lane<br />Fitzroy, Melbourne VIC 3065</p>
+          </div>
+          <div class="act5__info-block">
+            <h4>Hours</h4>
+            <p>
+              Mon – Fri &nbsp;&nbsp;7:00 am – 4:00 pm<br />
+              Sat – Sun &nbsp;&nbsp;8:00 am – 5:00 pm
+            </p>
+          </div>
+          <div class="act5__info-block">
+            <h4>Contact</h4>
+            <p>hello@komorebi.com.au<br />+61 3 9000 0000</p>
+          </div>
+        </div>
+
+        <div class="act5__map">
+          <img class="act5__map-img" src="komorebi%20place.jpg" alt="Komorebi location" />
+        </div>
+
+      </div>
+    </div>
+
+    <footer class="footer">
+      <p class="footer__copy">© 2026 Komorebi. Melbourne.</p>
+      <p class="footer__tagline">木漏れ日 — Light through the leaves.</p>
+    </footer>
+  </section>
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
