@@ -7,7 +7,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 /* ── Mobile: swap cut video to vertical version ─────────── */
 if (window.innerWidth <= 768) {
-  document.querySelector('.act1__cut').src = 'vertical2.mp4';
+  document.querySelector('.act1__cut').src = 'vertical3.mp4';
 }
 
 /* ── Page load: scroll hint entrance ───────────────────────*/
