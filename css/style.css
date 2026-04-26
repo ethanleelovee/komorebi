@@ -56,7 +56,8 @@ body {
   padding: 0;
   line-height: 1;
   position: absolute;
-  top: 1.4rem;
+  top: 50%;
+  transform: translateY(-50%);
   right: 1.5rem;
 }
 
@@ -530,11 +531,11 @@ body {
 /* ── RESPONSIVE ───────────────────────────────────────────── */
 @media (max-width: 768px) {
   .nav {
-    padding: 1.8rem 1.5rem 1.5rem;
-    align-items: flex-start;
+    padding: 1.5rem 1.5rem;
+    align-items: center;
   }
 
-  .nav__logo { font-size: 3.5rem; line-height: 1; }
+  .nav__logo { font-size: 2.45rem; line-height: 1; }
 
   .nav__links { display: none; }
 
@@ -549,7 +550,6 @@ body {
     padding: 0 1.5rem;
     background: rgba(15,13,11,0.94);
     backdrop-filter: blur(8px);
-    border-top: 1px solid rgba(200,185,154,0.08);
     opacity: 0;
     transform: translateY(-12px);
     pointer-events: none;
