@@ -174,6 +174,24 @@ gsap.to('.act5__map', {
 });
 
 
+/* ── Mobile hamburger menu ──────────────────────────────── */
+const hamburger = document.querySelector('.nav__hamburger');
+const dropdown  = document.querySelector('.nav__dropdown');
+
+if (hamburger) {
+  hamburger.addEventListener('click', () => {
+    const isOpen = dropdown.classList.toggle('is-open');
+    hamburger.innerHTML = isOpen ? '&#10005;' : '&#9776;';
+  });
+  dropdown.querySelectorAll('.nav__dropdown-link').forEach(link => {
+    link.addEventListener('click', () => {
+      dropdown.classList.remove('is-open');
+      hamburger.innerHTML = '&#9776;';
+    });
+  });
+}
+
+
 /* ── Nav: fade-in background on scroll ──────────────────── */
 ScrollTrigger.create({
   start: 'top -80px',
