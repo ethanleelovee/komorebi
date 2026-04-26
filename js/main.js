@@ -5,6 +5,11 @@
 
 gsap.registerPlugin(ScrollTrigger);
 
+/* ── Mobile: swap cut video to vertical version ─────────── */
+if (window.innerWidth <= 768) {
+  document.querySelector('.act1__cut').src = 'Vertical.mov';
+}
+
 /* ── Page load: scroll hint entrance ───────────────────────*/
 gsap.to('.act1__scroll-hint', { opacity: 1, duration: 1.2, delay: 2, ease: 'power2.out' });
 
