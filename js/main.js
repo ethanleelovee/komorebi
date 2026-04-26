@@ -5,16 +5,10 @@
 
 gsap.registerPlugin(ScrollTrigger);
 
-/* ── Mobile: swap videos + text slide-up setup ──────────── */
+/* ── Mobile: swap videos to vertical versions ───────────── */
 if (window.innerWidth <= 768) {
   document.querySelector('.act1__cut').src = 'vertical3.mp4';
   document.querySelector('.act3__video').src = 'vertical%20(pourover1).mp4';
-
-  // Set initial slide-up state for all texts
-  gsap.set(['.act1__text--phase1', '.act1__text--phase2', '.act3__text'], { y: 30 });
-
-  // Phase1 text: slide up on load
-  gsap.to('.act1__text--phase1', { y: 0, duration: 1.2, ease: 'power3.out', delay: 0.6 });
 }
 
 /* ── Page load: scroll hint entrance ───────────────────────*/
@@ -79,10 +73,9 @@ zoomTl
     duration: 0.42,
   }, 0.30)
 
-  /* "We do" appears — y: 0 drives slide-up on mobile */
+  /* "We do" appears midway through cut image zoom */
   .to('.act1__text--phase2', {
     opacity: 1,
-    y: 0,
     ease: 'power2.out',
     duration: 0.10,
   }, 0.52)
@@ -105,8 +98,8 @@ zoomTl
   /* Act 3 pourover video fades in */
   .to('.act3', { opacity: 1, duration: 0.12 }, 0.90)
 
-  /* "Pause and have a rest" fades in — y: 0 drives slide-up on mobile */
-  .to('.act3__text', { opacity: 1, y: 0, duration: 0.10 }, 1.02);
+  /* "Pause and have a rest" fades in after one more scroll */
+  .to('.act3__text', { opacity: 1, duration: 0.10 }, 1.02);
 
 
 /* ── ACT 3 → ACT 4: Section Cover Slide ─────────────────────

@@ -512,28 +512,10 @@ body {
 @media (max-width: 768px) {
   .nav { padding: 1.2rem 1.5rem; }
 
-  /* Videos: 40vh gap at top, no bottom gap */
-  .act1 { clip-path: none; }
-  .act1__zoom-wrap,
-  .act1__cut,
-  .act3 { inset: 40vh 0 0 0; }
-  .act3 { overflow: visible; }
+  .act1 { clip-path: inset(20vh 0); }
 
-  /* Texts: centered in the 40vh top gap */
-  .act1__text--phase1,
-  .act1__text--phase2 {
-    white-space: normal;
-    text-align: center;
-    width: 90%;
-    top: 20vh;
-    transform: translate(-50%, -50%);
-  }
-
-  /* act3 text: pulled above act3 into the gap */
-  .act3__text {
-    top: -20vh;
-    transform: translate(-50%, -50%);
-  }
+  .act1__text--phase1 { white-space: normal; text-align: center; width: 90%; }
+  .act1__text--phase2 { white-space: normal; text-align: center; width: 90%; }
 
   .act5__grid { grid-template-columns: 1fr; gap: 2.5rem; }
 
